@@ -9,5 +9,5 @@
 * run `php bin/console doctrine:migrations:migrate`
 * run `npm install`
 * run `npm run dev`
-* install [symfony cli]('https://symfony.com/download')
+* install [symfony cli](https://symfony.com/download)
 * run `symfony server:start` to run the project
