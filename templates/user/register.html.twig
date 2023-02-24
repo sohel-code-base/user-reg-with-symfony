@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User Registration!{% endblock %}
+
+{% block body %}
+<div class="container bg-primary-subtle">
+
+{#    <div class="d-flex justify-content-center align-items-center mt-5">#}
+    <div class="col-md-6 offset-3 mt-5">
+        <div class="card">
+            <div class="card-body px-4">
+                <h5 class="card-title text-center">Signup !</h5>
+                {% for type, messages in app.flashes %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ type }} alert-dismissible">
+                            {{ message|trans }} <a href="{{ path('app_login') }}">Login Here</a>
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+
+                {{ form_start(form) }}
+
+                {{ form_label(form.name) }}
+                {{ form_widget(form.name) }}
+                {{ form_errors(form.name) }}
+
+                {{ form_label(form.email) }}
+                {{ form_widget(form.email) }}
+                {{ form_errors(form.email) }}
+
+                {{ form_widget(form.password) }}
+                {{ form_errors(form.password) }}
+
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-primary" type="submit">Register</button>
+                </div>
+
+                {{ form_end(form) }}
+
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
