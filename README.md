@@ -10,4 +10,4 @@
 * run `npm install`
 * run `npm run dev`
 * install [symfony cli](https://symfony.com/download)
-* run `symfony server:start` to run the project
+* run `symfony server:start` to run the project may be in `http://127.0.0.1:8000`
